@@ -12,7 +12,7 @@ export class CrudAlunosComponent implements OnInit {
 
   aluno: Object;
   listaAlunos = [];
-  tamanhoLista: number;
+  tamanhoLista=0;
 
   nome: string;
   matricula: string;
