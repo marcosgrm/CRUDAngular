@@ -1,0 +1,23 @@
+<h1>CRUD DE ALUNOS</h1>
+<p>
+  Nome: <input type="text" name="nome" [(ngModel)]=nome>
+</p>
+<p>
+Matrícula: <input type="text" name="matricula" [(ngModel)]=matricula>
+</p>
+<p>
+Idade: <input type="number" name="idade" [(ngModel)]=idade>
+</p>
+<p>
+  <button (click)=cadastrar()>Cadastrar</button>
+</p>
+
+<p>Quantidade de Alunos Cadastrados: {{tamanhoLista}}</p>
+
+<h3>Lista de Alunos</h3>
+<p *ngIf="tamanhoLista==0">Não há alunos cadastrados </p>
+<p *ngFor="let listagem of listaAlunos; let i = index">
+  Aluno {{i+1}}: {{listagem}}
+  <button (click)=remover(i)>X</button>
+</p>
+
